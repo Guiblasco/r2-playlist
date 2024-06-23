@@ -1,8 +1,5 @@
 export const isTitleEmpty = (songTitle: string): boolean => {
-  let isEmpty: boolean = false;
-  if (songTitle === "") {
-    isEmpty = true;
-  }
+  let isEmpty: boolean = songTitle === "" ? true : false;
   return isEmpty;
 };
 
@@ -15,10 +12,7 @@ export const isTitleShort = (songTitle: string): boolean =>
   songTitle.length < 3 ? true : false;
 
 export const isPlaylistFull = (songTitles: string[]): boolean => {
-  let isFull: boolean = false;
-  if (songTitles.length >= 5) {
-    isFull = true;
-  }
+  let isFull: boolean = songTitles.length > 5 ? true : false;
   return isFull;
 };
 
